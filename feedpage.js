@@ -27,8 +27,6 @@ const list_items = [
     'item8',
     'item9',
     'item4',
-    'hello world i am fine',
-    'its your world im living in it'
 ];
 
 const list_element = document.getElementById('list');
