@@ -61,35 +61,6 @@ function displayList_after_click(items, wrapper, rows_per_page, page) {
     }
 } 
 
-function displayList(items, wrapper, rows_per_page, page) {
-
-    wrapper.innerHTML = "";
-    page--;
-    
-    let start = rows_per_page * page;
-    let end = start + rows_per_page;
-    let paginatedItems = items.slice(start, end);
-    for (let i = 0; i < paginatedItems.length; i++) {
-        let item = paginatedItems[i];
-
-        let item_element = document.createElement('div');
-        item_element.classList.add('item');
-        item_element.innerText = item;
-
-        let upvote = document.createElement('div');
-        let vote = document.createElement('div');
-
-        vote.classList.add('votetext');
-        upvote.classList.add('upvoteIcon');
-        upvote.addEventListener('click', function() {
-            vote.innerText++;
-        })
-
-        upvote.appendChild(vote);
-        item_element.appendChild(upvote);
-        wrapper.appendChild(item_element);
-    }
-}
 
 function setupPagination(items, wrapper, rows_per_page) {
 
