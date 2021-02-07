@@ -122,7 +122,6 @@ function handlers() {
     displayList_after_click(list_items, list_element, rows, currentPage);
 }
 
-displayList(list_items, list_element, rows, currentPage);
 setupPagination(list_items, pagination_element, rows);
 
 
