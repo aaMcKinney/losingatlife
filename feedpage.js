@@ -27,7 +27,7 @@ function search(items, wrapper) {
 
 
 
-function displayList_after_click(items, wrapper, rows_per_page, page) {
+function displayList(items, wrapper, rows_per_page, page) {
     
     const displayText = `${document.getElementById('text-box').value} \n\n\n- Shared by losingatlife.com user.`;
     list_items.unshift(displayText);
@@ -119,7 +119,7 @@ window.smoothScroll = function (target) {
 
 function handlers() {
     setupPagination(list_items, pagination_element, rows);
-    displayList_after_click(list_items, list_element, rows, currentPage);
+    displayList(list_items, list_element, rows, currentPage);
 }
 
 setupPagination(list_items, pagination_element, rows);
